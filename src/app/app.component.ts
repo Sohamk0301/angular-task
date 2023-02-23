@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
 })
 export class AppComponent {
   num: number;
@@ -10,9 +10,10 @@ export class AppComponent {
 
   calculateFactorial() {
     let fact = 1;
-    for(let i = 1; i <= this.num; i++) {
+    for (let i = 1; i <= this.num; i++) {
       fact *= i;
     }
     this.factorial = fact;
+    return fact;
   }
 }
