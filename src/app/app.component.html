@@ -1,40 +1,6 @@
-<h3>Event Binding</h3>
-
-<button (click)="display()">Click</button>
-{{ wish1 }}
-<br />
-<button (dblclick)="dblClick()">doubleClick</button>
-<br />
-<input type="text" (blur)="blurEvent()" value="Blur Event" />
-<br />
-
-<button (click)="eventHandle('This event is handled using $event')">
-  Event is handled by dollor event</button
-><br />
-
-<button (click)="eventHandle(50)">Event is handled by dollor event</button
-><br />
-
-<button (click)="eventHandle($event)">Event is handled by dollor event</button
-><br />
-
-<h3>Template reference variable eg-1-- the text from the input is displayed</h3>
-<input #inputtext (input)="inputevent1(inputtext)" />
-<p>The entered value is {{ value1 }}</p>
-<h3>
-  Template reference variable eg2-- the text from the input is displayed in the
-  console when the button is clicked
-</h3>
-<input #refvar type="text" />
-<button (click)="displayconsole(refvar.value)">
-  Display data from text box
-</button>
-<br />
-<h3>
-  Template reference variable eg3-- the text from the input is displayed in
-  console
-</h3>
-<input #ref type="text" (keyup)="eventhandle(ref.value)" />
-<br />
-
-
+<div>
+  <label for="numberInput">Enter a number:</label>
+  <input type="number" #numInput id="numberInput">
+  <button (click)="calculateFactorial()">Calculate Factorial</button>
+  <p *ngIf="factorial !== null">Factorial of {{num}} is {{factorial}}</p>
+</div>
